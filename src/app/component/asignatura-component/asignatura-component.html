@@ -1,1 +1,22 @@
-<p>asignatura-component works!</p>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Horas</th>
+                <th>Profesor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (asignatura of asignaturas; track asignatura.id) {
+                <tr>
+                    <td>{{ asignatura.id }}</td>
+                    <td>{{ asignatura.nombre }}</td>
+                    <td>{{ asignatura.horas }}</td>
+                    <td>{{ asignatura.imparte }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

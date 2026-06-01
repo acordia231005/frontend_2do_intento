@@ -1,0 +1,55 @@
+/* ─── Header ──────────────────────────────────────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 29, 46, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 64px;
+  box-shadow: var(--shadow-sm);
+}
+
+header h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--color-primary-h);
+  white-space: nowrap;
+}
+
+/* ─── Nav ────────────────────────────────────────────────────────────────────── */
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+header nav ul li a {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+header nav ul li a:hover {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border-bottom-color: var(--color-primary-h);
+}
+
+header nav ul li a.active-link {
+  color: var(--color-primary-h);
+  background: rgba(108, 99, 255, 0.12);
+  border-bottom-color: var(--color-primary-h);
+}
