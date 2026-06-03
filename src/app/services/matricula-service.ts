@@ -7,15 +7,15 @@ import { Matricula } from '../model/matricula';
   providedIn: 'root',
 })
 export class MatriculaService {
-  private readonly URL = 'http://localhost:8081';
+  private _url: string = 'http://localhost:8081';
 
   constructor(private http: HttpClient) {}
 
-  getAllMatriculas(): Observable<Matricula[]> {
-    return this.http.get<Matricula[]>(`${this.URL}/matricula`);
+  findAll(): Observable<Matricula[]> {
+    return this.http.get<Matricula[]>(this._url + `/matricula`);
   }
 
-  getMatriculaById(id: number): Observable<Matricula> {
-    return this.http.get<Matricula>(`${this.URL}/matricula/${id}`);
+  findById(id: number): Observable<Matricula> {
+    return this.http.get<Matricula>(this._url + `/matricula/${id}`);
   }
 }

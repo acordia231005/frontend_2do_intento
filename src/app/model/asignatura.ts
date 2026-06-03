@@ -1,17 +1,13 @@
 import { Profesor } from "./profesor";
 
 export class Asignatura {
-    private _id:number;
-    private _nombre:string;
-    private _horas:string;
-    private _imparte:Profesor;
 
-    constructor(id:number,nombre:string,horas:string,imparte:Profesor){
-        this._id=id;
-        this._nombre=nombre;
-        this._horas=horas;
-        this._imparte=imparte;
-    }
+    constructor(
+        private _id:number,
+        private _nombre:string,
+        private _horas:string,
+        private _profesor:Profesor
+    ){}
 
     get id():number {return this._id;}
     set id(value:number) {this._id = value;}
@@ -22,7 +18,7 @@ export class Asignatura {
     get horas():string {return this._horas;}
     set horas(value:string) {this._horas = value;}
 
-    get imparte():Profesor {return this._imparte;}
-    set imparte(value:Profesor) {this._imparte = value;}
+    get profesor():Profesor {return this._profesor;}
+    set profesor(value:Profesor) {this._profesor = value;}
 
 }

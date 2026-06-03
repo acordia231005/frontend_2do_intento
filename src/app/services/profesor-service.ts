@@ -7,15 +7,15 @@ import { Profesor } from '../model/profesor';
   providedIn: 'root',
 })
 export class ProfesorService {
-  private readonly URL = 'http://localhost:8081';
+  private _url: String = 'http://localhost:8081';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getAllProfesores(): Observable<Profesor[]> {
-    return this.http.get<Profesor[]>(`${this.URL}/profesor`);
+  findAll(): Observable<Profesor[]> {
+    return this.http.get<Profesor[]>(this._url + '/profesor');
   }
 
-  getProfesorById(id: number): Observable<Profesor> {
-    return this.http.get<Profesor>(`${this.URL}/profesor/${id}`);
+  findById(id: number): Observable<Profesor> {
+    return this.http.get<Profesor>(this._url + `/profesor/${id}`);
   }
 }

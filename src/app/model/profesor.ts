@@ -1,15 +1,9 @@
 export class Profesor {
-    private _id:number;
-    private _nombre:string;
-    private _apellidos:string;
-    private _especialidad:string;
-
-    constructor(id:number,nombre:string,apellidos:string,especialidad:string){
-        this._id=id;
-        this._nombre=nombre;
-        this._apellidos=apellidos;
-        this._especialidad=especialidad;
-    }
+    constructor(
+        private _id:number,
+        private _nombre:string,
+        private _apellidos:string,
+        private _especialidad:string){}
 
     get id():number {return this._id;}
     set id(value:number) {this._id = value;}

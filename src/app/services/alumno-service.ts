@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AlumnoService {
-  private readonly URL = 'http://localhost:8081';
+  private _url: string = 'http://localhost:8081';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getAllAlumnos(): Observable<Alumno[]> {
-    return this.http.get<Alumno[]>(`${this.URL}/alumno`);
+  findAll(): Observable<Alumno[]> {
+    return this.http.get<Alumno[]>(this._url + `/alumno`);
   }
 
-  getAlumnoById(id: number): Observable<Alumno> {
-    return this.http.get<Alumno>(`${this.URL}/alumno/${id}`);
+  findById(id: number): Observable<Alumno> {
+    return this.http.get<Alumno>(this._url + `/alumno/${id}`);
   }
 }

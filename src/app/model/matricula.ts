@@ -2,19 +2,12 @@ import { Alumno } from "./alumno";
 import { Asignatura } from "./asignatura";
 
 export class Matricula {
-    private _id:number;
-    private _alumno:Alumno;
-    private _asignatura:Asignatura;
-    private _curso:number;
-    private _notaMedia:number;
-
-    constructor(id:number,alumno:Alumno,asignatura:Asignatura,curso:number,notaMedia:number){
-        this._id=id;
-        this._alumno=alumno;
-        this._asignatura=asignatura;
-        this._curso=curso;
-        this._notaMedia=notaMedia;
-    }
+    constructor(
+        private _id:number,
+        private _alumno:Alumno,
+        private _asignatura:Asignatura,
+        private _curso:number,
+        private _notaMedia:number){}
 
     get id():number {return this._id;}
     set id(value:number) {this._id = value;}

@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AsignaturaService {
-  private readonly URL = 'http://localhost:8081';
+  private _url: string = 'http://localhost:8081';
 
   constructor(private http: HttpClient) {}
 
-  getAllAsignaturas(): Observable<Asignatura[]> {
-    return this.http.get<Asignatura[]>(`${this.URL}/asignatura`);
+  findAll(): Observable<Asignatura[]> {
+    return this.http.get<Asignatura[]>( this._url + `/asignatura`);
   }
 
-  getAsignaturaById(id: number): Observable<Asignatura> {
-    return this.http.get<Asignatura>(`${this.URL}/asignatura/${id}`);
+  findById(id: number): Observable<Asignatura> {
+    return this.http.get<Asignatura>(this._url + `/asignatura/${id}`);
   }
 }

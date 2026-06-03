@@ -8,17 +8,13 @@
                 <th>Profesor</th>
             </tr>
         </thead>
-        <tbody>
-        <!--     
-            @for (asignatura of asignaturas; track asignatura.id) {
-                <tr>
+        <tbody>      
+                <tr *ngFor="let asignatura of asignaturas">
                     <td>{{ asignatura.id }}</td>
                     <td>{{ asignatura.nombre }}</td>
                     <td>{{ asignatura.horas }}</td>
-                    <td>{{ asignatura.imparte }}</td>
+                    <td>{{ asignatura.profesor.nombre }}</td>
                 </tr>
-            }
-        -->
         </tbody>
     </table>
 </body>
