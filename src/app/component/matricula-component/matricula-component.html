@@ -14,8 +14,8 @@
                 <tr>
                     <td>{{ matricula.id }}</td>
                     <td>{{ matricula.curso }}</td>
-                    <td>{{ matricula.alumno }}</td>
-                    <td>{{ matricula.asignatura }}</td>
+                    <td>{{ matricula.alumno?.nombre }}</td>
+                    <td>{{ matricula.asignatura?.nombre }}</td>
                     <td>{{ matricula.notaMedia }}</td>
                 </tr>
             }

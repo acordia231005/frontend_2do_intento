@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: daweb-frontend
+    runtime: node
+    rootDir: frontend_2do_intento
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: node dist/frontend_2do_intento/server/server.mjs
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: NODE_ENV
+        value: production
+      - key: API_URL
+        value: https://daweb-backend.onrender.com 
