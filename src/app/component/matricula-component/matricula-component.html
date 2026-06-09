@@ -4,13 +4,13 @@
             <th>ID</th>
             <th>Curso</th>
             <th>Alumno</th>
-            <th>Profesor</th>
             <th>Asignatura</th>
+            <th>Nota media</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let matricula of matriculas">
-            <td>{{ matricula.id }}</td>
+            <td>{{ matricula.idMat }}</td>
             <td>{{ matricula.curso }}</td>
             <td>{{ matricula.alumno.nombre }}</td>
             <td>{{ matricula.asignatura.nombre }}</td>

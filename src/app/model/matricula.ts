@@ -3,14 +3,14 @@ import { Asignatura } from "./asignatura";
 
 export class Matricula {
     constructor(
-        private _id:number,
+        private _idMat:number,
         private _alumno:Alumno,
         private _asignatura:Asignatura,
         private _curso:number,
         private _notaMedia:number){}
 
-    get id():number {return this._id;}
-    set id(value:number) {this._id = value;}
+    get idMat():number {return this._idMat;}
+    set idMat(value:number) {this._idMat = value;}
 
     get alumno():Alumno {return this._alumno;}
     set alumno(value:Alumno) {this._alumno = value;}
