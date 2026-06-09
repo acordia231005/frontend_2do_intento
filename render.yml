@@ -5,7 +5,7 @@ services:
     rootDir: frontend_2do_intento
     plan: free
     buildCommand: npm install --include=dev && npm run build
-    startCommand: node server.mjs
+    startCommand: npx serve dist/frontend_2do_intento/browser -s -l 4000
     envVars:
       - key: PORT
         value: 4000
