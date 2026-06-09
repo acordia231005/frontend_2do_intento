@@ -1,20 +1,18 @@
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Especialidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (profesor of profesores; track profesor.id) {
-                <tr>
-                    <td>{{ profesor.id }}</td>
-                    <td>{{ profesor.nombre }}</td>
-                    <td>{{ profesor.apellidos }}</td>
-                    <td>{{ profesor.especialidad }}</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let profesor of profesores">
+            <td>{{ profesor.id }}</td>
+            <td>{{ profesor.nombre }}</td>
+            <td>{{ profesor.apellidos }}</td>
+            <td>{{ profesor.especialidad }}</td>
+        </tr>
+    </tbody>
+</table>
