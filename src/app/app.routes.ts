@@ -5,7 +5,6 @@ import { AsignaturaComponent } from './component/asignatura-component/asignatura
 import { MatriculaComponent } from './component/matricula-component/matricula-component';
 
 export const routes: Routes = [
-    { path: 'header', redirectTo: 'header'},
     { path: 'alumno', component: AlumnoComponent },
     { path: 'profesor', component: ProfesorComponent },
     { path: 'asignatura', component: AsignaturaComponent },
