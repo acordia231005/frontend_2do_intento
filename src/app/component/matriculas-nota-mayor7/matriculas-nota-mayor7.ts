@@ -16,7 +16,6 @@ export class MatriculasNotaMayor7 implements OnInit {
   ngOnInit(): void {
     this.obtenerMatriculasMayor7();
   }
-
   constructor(private _matriculaService: MatriculaService) { }
 
   obtenerMatriculasMayor7() {
