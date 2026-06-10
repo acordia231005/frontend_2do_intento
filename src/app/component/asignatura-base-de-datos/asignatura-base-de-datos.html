@@ -1,0 +1,18 @@
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Horas</th>
+                <th>Profesor</th>
+            </tr>
+        </thead>
+        <tbody>      
+                <tr *ngFor="let asignatura of asignaturas">
+                    <td>{{ asignatura.id }}</td>
+                    <td>{{ asignatura.nombre }}</td>
+                    <td>{{ asignatura.horas }}</td>
+                    <td>{{ asignatura.profesor.nombre }}</td>
+                </tr>
+        </tbody>
+    </table>

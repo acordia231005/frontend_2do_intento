@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Matricula } from '../../model/matricula';
 import { MatriculaService } from '../../services/matricula-service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-matriculas-nota-mayor7',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './matriculas-nota-mayor7.html',
   styleUrl: './matriculas-nota-mayor7.css',
 })
