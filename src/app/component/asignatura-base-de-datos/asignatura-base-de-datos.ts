@@ -21,7 +21,7 @@ export class AsignaturaBaseDeDatos {
   
   obtenerAsignaturaBaseDeDatos() {
     return this._asignaturaService.findAll().subscribe( asignaturaBasededatos => {
-        this.asignaturas = asignaturaBasededatos.filter(a => a.nombre.toLowerCase().includes("base de datos"))
+        this.asignaturas = asignaturaBasededatos.filter(a => a.nombre.toLowerCase() === "base de datos")
       }
     )
   }
