@@ -7,7 +7,7 @@ import { Matricula } from '../model/matricula';
   providedIn: 'root',
 })
 export class MatriculaService {
-  private _url: string = 'https://daweb-backend.onrender.com:8081';
+  private _url: string = 'https://daweb-backend.onrender.com';
 
   constructor(private http: HttpClient) {}
 
