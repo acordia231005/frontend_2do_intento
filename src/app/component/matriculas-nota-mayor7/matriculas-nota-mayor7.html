@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Curso</th>
+            <th>Alumno</th>
+            <th>Asignatura</th>
+            <th>Nota media</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let matricula of matriculas">
+            <td>{{ matricula.idMat }}</td>
+            <td>{{ matricula.curso }}</td>
+            <td>{{ matricula.alumno.nombre }}</td>
+            <td>{{ matricula.asignatura.nombre }}</td>
+            <td>{{ matricula.notaMedia }}</td>
+        </tr>
+    </tbody>
+</table>

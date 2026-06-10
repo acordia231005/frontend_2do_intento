@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 export class AsignaturaService {
   private _url: string = 'https://daweb-backend.onrender.com';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   findAll(): Observable<Asignatura[]> {
-    return this.http.get<Asignatura[]>( this._url + `/asignatura`);
+    return this.http.get<Asignatura[]>(this._url + `/asignatura`);
   }
 
   findById(id: number): Observable<Asignatura> {

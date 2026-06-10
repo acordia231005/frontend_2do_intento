@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Matricula } from '../model/matricula';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Matricula } from '../model/matricula';
 export class MatriculaService {
   private _url: string = 'https://daweb-backend.onrender.com';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   findAll(): Observable<Matricula[]> {
     return this.http.get<Matricula[]>(this._url + `/matricula`);
