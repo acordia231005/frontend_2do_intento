@@ -5,6 +5,7 @@ import { AsignaturaComponent } from './component/asignatura-component/asignatura
 import { MatriculaComponent } from './component/matricula-component/matricula-component';
 import { MatriculasNotaMayor7 } from './component/matriculas-nota-mayor7/matriculas-nota-mayor7';
 import { AsignaturaBaseDeDatos } from './component/asignatura-base-de-datos/asignatura-base-de-datos';
+import { AlumnoporPrimeraletra } from './component/alumnopor-primeraletra/alumnopor-primeraletra';
 
 export const routes: Routes = [
     { path: 'alumno', component: AlumnoComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: 'asignatura', component: AsignaturaComponent },
     { path: 'matricula', component: MatriculaComponent },
     { path: 'matriculas-nota-mayor7', component: MatriculasNotaMayor7 },
-    { path: 'asignatura-base-de-datos', component: AsignaturaBaseDeDatos }
+    { path: 'asignatura-base-de-datos', component: AsignaturaBaseDeDatos },
+    { path: 'alumnopor-primeraletra', component: AlumnoporPrimeraletra }
 ];

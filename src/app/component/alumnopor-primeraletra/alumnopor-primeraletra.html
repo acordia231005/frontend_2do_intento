@@ -1,1 +1,18 @@
-<p>alumnopor-primeraletra works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>apellidos</th>
+            <th>ipasen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let alumno of alumnos">
+            <td>{{ alumno.id }}</td>
+            <td>{{ alumno.nombre }}</td>
+            <td>{{ alumno.apellidos }}</td>
+            <td>{{ alumno.ipasen }}</td>
+        </tr>
+    </tbody>
+</table>
