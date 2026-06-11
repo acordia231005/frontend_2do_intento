@@ -21,7 +21,7 @@ export class AsignaturaBaseDeDatos implements OnInit{
 
   obtenerAsignaturaBaseDeDatos() {
     return this._asignaturaService.findAll().subscribe(asignaturaBasededatos => {
-      this.asignaturas = asignaturaBasededatos.filter(a => a.profesor.especialidad.toLowerCase() === "base de datos")
+      this.asignaturas = asignaturaBasededatos.filter(a => a.nombre.toLowerCase() === "base de datos")
     }
     )
   }
