@@ -5,6 +5,7 @@
             <th>Nombre</th>
             <th>apellidos</th>
             <th>ipasen</th>
+            <th>asignaturas</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +14,8 @@
             <td>{{ alumno.nombre }}</td>
             <td>{{ alumno.apellidos }}</td>
             <td>{{ alumno.ipasen }}</td>
+            <td>{{ obtenerDeLosAlumnosQueEmpiezanPorA(alumno) }}</td>
         </tr>
+
     </tbody>
 </table>
