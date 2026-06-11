@@ -7,7 +7,7 @@ import { Profesor } from '../model/profesor';
   providedIn: 'root',
 })
 export class ProfesorService {
-  private _url: string = 'https://daweb-backend.onrender.com';
+  private _url: string = 'http://localhost:8081';
 
   constructor(private http: HttpClient) { }
 

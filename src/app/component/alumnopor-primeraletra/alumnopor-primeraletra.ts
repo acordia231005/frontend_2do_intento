@@ -16,7 +16,6 @@ import { Asignatura } from '../../model/asignatura';
 export class AlumnoporPrimeraletra implements OnInit {
   public alumnos: Alumno[] = [];
   public matriculas: Matricula[] = [];
-  public asignaturas: Asignatura[] = [];
 
   ngOnInit(): void {
     this.obtenerAlumnospora();

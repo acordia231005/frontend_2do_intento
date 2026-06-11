@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AlumnoService {
-  private _url: string = 'https://daweb-backend.onrender.com';
+  private _url: string = 'http://localhost:8081';
 
   constructor(private http: HttpClient) { }
 
